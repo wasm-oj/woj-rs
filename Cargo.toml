@@ -1,0 +1,32 @@
+[package]
+name = "woj"
+version = "0.0.4"
+authors = [ "Jacob Lin <jacob@csie.cool>" ]
+description = "You can interact with WASM OJ Wonderland through this API"
+license = "MIT"
+edition = "2018"
+homepage = "https://github.com/wasm-oj/woj-rs"
+repository = "https://github.com/wasm-oj/woj-rs"
+keywords = [ "wasm-oj", "api" ]
+include = [
+  "src/**/*",
+  "docs/**/*",
+  "Cargo.toml",
+  "README.md",
+  "LICENSE"
+]
+
+[dependencies]
+serde = "^1.0"
+serde_derive = "^1.0"
+serde_json = "^1.0"
+url = "^2.2"
+reqwest-middleware = "0.2.0"
+
+  [dependencies.uuid]
+  version = "^1.0"
+  features = [ "serde" ]
+
+  [dependencies.reqwest]
+  version = "^0.11"
+  features = [ "json", "multipart" ]
